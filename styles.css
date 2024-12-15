@@ -87,4 +87,8 @@ footer {
 .place-img {
     max-width: 400px;
 }
-
+hr.style20 {
+    background: url(https://image.ibb.co/gJm5Qv/striped.png);
+    height: 5px;
+    border: 0;
+  }
