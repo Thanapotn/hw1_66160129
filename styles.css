@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
@@ -78,11 +83,14 @@ main section#places article img {
     border: 5px solid black;
 }
 
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #333;
-    color: #fff;
+footer { 
+    background: #333; 
+    color: #fff; 
+    text-align: center; 
+    padding: 1rem; 
+    position: relative; 
+    bottom: 0; 
+    width: 100%; 
 }
 
 /* Responsive Styles */
@@ -142,3 +150,11 @@ article img {
     flex-direction: column;
     align-items: center;
 }
+.content-box {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background-color: white;
+   }
