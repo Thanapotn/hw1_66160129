@@ -164,3 +164,63 @@ article img {
     border-radius: 8px;
     background-color: white;
    }
+   .nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none; /* ซ่อนปุ่ม Hamburger บนหน้าจอใหญ่ */
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1100;
+    background-color: #333;
+}
+
+.nav-toggle-label span {
+    display: block;
+    background: #fff;
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+/* แสดง Hamburger Menu เฉพาะหน้าจอเล็ก */
+@media (max-width: 768px) {
+    header nav ul {
+        display: none; /* ซ่อนเมนู */
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+        text-align: center;
+        
+    }
+
+    /* แสดงเมนูเมื่อ Checkbox ถูกเช็ค */
+    .nav-toggle:checked ~ nav ul {
+        display: flex;
+    }
+
+    .nav-toggle-label {
+        display: block; /* แสดง Hamburger ปุ่ม */
+        background-color: #333;
+    }
+
+    /* แปลง Hamburger เป็น X เมื่อกด */
+    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
+        opacity: 0;
+    }
+    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
