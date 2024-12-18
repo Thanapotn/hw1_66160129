@@ -100,17 +100,23 @@ footer {
     }
 }
 /* General image styles */
-.responsive-img {
-    width: 100%;
+.responsive-img, article img{
+    max-width: 100%;
     height: auto;
+    display:block;
+    margin: 10px auto;
+    transition: transform 0.3s ease-in-out;
 }
-
+.responsive-img:hover, article img:hover {
+    transform: scale(1.1); /* ขยายรูป 10% */
+}
 .highlight {
     max-width: 600px;
 }
 
 .place-img {
     max-width: 400px;
+    
 }
 hr.style20 {
     background: url(https://image.ibb.co/gJm5Qv/striped.png);
